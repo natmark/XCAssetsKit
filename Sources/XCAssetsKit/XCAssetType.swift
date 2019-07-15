@@ -44,7 +44,7 @@ public enum XCAssetType: String {
         case .dataSet:
             return []
         case .textureSet:
-            return []
+            return [.mipMapSet]
         case .cubeTextureSet:
             return [.mipMapSet]
         case .mipMapSet:
