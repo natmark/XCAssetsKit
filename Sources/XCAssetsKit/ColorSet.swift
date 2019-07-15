@@ -32,17 +32,20 @@ public struct ColorSetContents {
         public struct Color {
             public var colorSpace: String
             public var components: Components
+            public var reference: String?
 
             private enum CodingKeys: String, CodingKey {
                 case colorSpace = "color-space"
                 case components
+                case reference
             }
             
             public struct Components {
-                public var red: String
-                public var blue: String
-                public var green: String
-                public var alpha: String
+                public var red: String?
+                public var blue: String?
+                public var green: String?
+                public var alpha: String?
+                public var white: String?
             }
         }
     }
