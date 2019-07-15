@@ -15,10 +15,6 @@ final class ImageAssetsTests: XCTestCase {
         }
 
         let xcassets = try! XCAssets(fileURL: url)
-        XCTAssertEqual(xcassets.contents.info.author, "xcode")
-        XCTAssertEqual(xcassets.contents.info.version, 1)
-
-        XCTAssertEqual(xcassets.contents.properties?.compressionType, "automatic")
 
         if case .imageSet(let imageSet) = xcassets.assets[0] {
             XCTAssertEqual(imageSet.fileName, "image_png")

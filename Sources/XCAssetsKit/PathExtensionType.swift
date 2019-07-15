@@ -10,7 +10,7 @@ import Foundation
 enum PathExtensionType: String {
     case folder = ""
     case imageSet = "imageset"
-    case colorSet = "colorser"
+    case colorSet = "colorset"
     case dataSet = "dataset"
     case textureSet = "textureset"
     case cubeTextureSet = "cubetextureset"
