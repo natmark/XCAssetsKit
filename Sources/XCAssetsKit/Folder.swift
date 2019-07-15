@@ -9,7 +9,7 @@ public struct Folder {
     public var contents: FolderContents
 }
 
-public struct FolderContents {
+public struct FolderContents: Decodable {
     public var info: Info
     public var properties: Properties?
 

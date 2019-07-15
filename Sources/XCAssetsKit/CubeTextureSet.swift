@@ -9,7 +9,7 @@ public struct CubeTextureSet {
     public var contents: CubeTextureSetContents
 }
 
-public struct CubeTextureSetContents {
+public struct CubeTextureSetContents: Decodable {
     public var info: Info
     public var properties: Properties?
     public var textures: [Texture]?

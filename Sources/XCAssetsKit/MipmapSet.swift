@@ -9,7 +9,7 @@ public struct MipmapSet {
     public var contents: MipmapSetContents
 }
 
-public struct MipmapSetContents {
+public struct MipmapSetContents: Decodable {
     public var info: Info
     public var properties: Properties?
     public var levels: [Level]?

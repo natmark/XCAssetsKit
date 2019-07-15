@@ -9,7 +9,7 @@ public struct DataSet {
     public var contents: DataSetContents
 }
 
-public struct DataSetContents {
+public struct DataSetContents: Decodable {
     public var info: Info
     public var properties: Properties?
     public var data: [Data]?

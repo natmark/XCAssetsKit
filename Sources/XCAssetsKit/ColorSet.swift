@@ -9,10 +9,10 @@ public struct ColorSet {
     public var contents: ColorSetContents
 }
 
-public struct ColorSetContents {
+public struct ColorSetContents: Decodable {
     public var info: Info
     public var colors: [Color]
-    public struct Color {
+    public struct Color: Decodable {
         public var idiom: String
         public var displayGamut: String?
         public var appearances: [Appearance]?
@@ -21,13 +21,15 @@ public struct ColorSetContents {
         private enum CodingKeys: String, CodingKey {
             case idiom
             case displayGamut = "display-gamut"
+            case appearances
+            case color
         }
         
-        public struct Appearance {
+        public struct Appearance: Decodable {
             public var appearance: String
             public var value: String
         }
-        public struct Color {
+        public struct Color: Decodable {
             public var colorSpace: String
             public var components: Components
             public var reference: String?
@@ -38,7 +40,7 @@ public struct ColorSetContents {
                 case reference
             }
             
-            public struct Components {
+            public struct Components: Decodable {
                 public var red: String?
                 public var blue: String?
                 public var green: String?

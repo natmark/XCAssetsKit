@@ -9,7 +9,7 @@ public struct ImageSet {
     public var contents: ImageSetContents
 }
 
-public struct ImageSetContents {
+public struct ImageSetContents: Decodable {
     public var info: Info
     public var images: [Image]
     public var properties: Properties?
