@@ -5,8 +5,14 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-public struct ColorSet {
-    public var contents: ColorSetContents
+import Foundation
+
+public struct ColorSet: AssetProtocl {
+    public typealias Contents = ColorSetContents
+    public var contents: Contents
+    public var assets: [Asset] = []
+    public var fileName: String
+    public var fileURL: URL
 }
 
 public struct ColorSetContents: Decodable {

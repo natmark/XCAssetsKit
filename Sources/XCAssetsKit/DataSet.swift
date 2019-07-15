@@ -5,8 +5,14 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-public struct DataSet {
-    public var contents: DataSetContents
+import Foundation
+
+public struct DataSet: AssetProtocl {
+    public typealias Contents = DataSetContents
+    public var contents: Contents
+    public var assets: [Asset] = []
+    public var fileName: String
+    public var fileURL: URL
 }
 
 public struct DataSetContents: Decodable {

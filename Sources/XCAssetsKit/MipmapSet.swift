@@ -5,8 +5,14 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-public struct MipmapSet {
-    public var contents: MipmapSetContents
+import Foundation
+
+public struct MipmapSet: AssetProtocl {
+    public typealias Contents = MipmapSetContents
+    public var contents: Contents
+    public var assets: [Asset] = []
+    public var fileName: String
+    public var fileURL: URL
 }
 
 public struct MipmapSetContents: Decodable {

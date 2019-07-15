@@ -5,8 +5,14 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-public struct CubeTextureSet {
-    public var contents: CubeTextureSetContents
+import Foundation
+
+public struct CubeTextureSet: AssetProtocl {
+    public typealias Contents = CubeTextureSetContents
+    public var contents: Contents
+    public var assets: [Asset] = []
+    public var fileName: String
+    public var fileURL: URL
 }
 
 public struct CubeTextureSetContents: Decodable {

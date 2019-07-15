@@ -5,8 +5,14 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-public struct TextureSet {
-    public var contents: TextureSetContents
+import Foundation
+
+public struct TextureSet: AssetProtocl {
+    public typealias Contents = TextureSetContents
+    public var contents: Contents
+    public var assets: [Asset] = []
+    public var fileName: String
+    public var fileURL: URL
 }
 
 public struct TextureSetContents: Decodable {

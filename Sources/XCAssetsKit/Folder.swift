@@ -5,8 +5,14 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-public struct Folder {
-    public var contents: FolderContents
+import Foundation
+
+public struct Folder: AssetProtocl {
+    public typealias Contents = FolderContents
+    public var contents: Contents
+    public var assets: [Asset] = []
+    public var fileName: String
+    public var fileURL: URL
 }
 
 public struct FolderContents: Decodable {

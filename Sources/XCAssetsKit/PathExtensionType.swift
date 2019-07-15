@@ -1,12 +1,13 @@
 //
-//  AssetType.swift
+//  PathExtensionType.swift
 //  XCAssetsKit
 //
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
 import Foundation
-public enum XCAssetType: String {
+
+enum PathExtensionType: String {
     case folder = ""
     case imageSet = "imageset"
     case colorSet = "colorser"
@@ -33,7 +34,7 @@ public enum XCAssetType: String {
     case sticker = "sticker"
     case stickerSequence = "stickersequense"
     
-    public var acceptedChildAssetTypes: [XCAssetType] {
+    public var acceptedChildAssetTypes: [PathExtensionType] {
         switch self {
         case .folder:
             return [.folder, .imageSet, .colorSet, .dataSet, .textureSet, .cubeTextureSet, .launchImage, .brandAssets, .appIconSet, .iconSet, .stickerIconSet, .arResoruceGroup, .complicationSet, .imageStack, .spriteAtlas, .gameCenterDashboardImage, .gameCenterLeaderBoard, .gameCenterLeaderBoardSet, .stickerPack]
