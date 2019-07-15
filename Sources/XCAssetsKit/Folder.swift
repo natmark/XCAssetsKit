@@ -5,8 +5,6 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-import Foundation
-
 public struct Folder {
     public var contents: FolderContents
 }

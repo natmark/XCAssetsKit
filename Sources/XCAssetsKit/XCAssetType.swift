@@ -13,7 +13,7 @@ public enum XCAssetType: String {
     case dataSet = "dataset"
     case textureSet = "textureset"
     case cubeTextureSet = "cubetextureset"
-    case mipMapSet = "mipmapset"
+    case mipmapSet = "mipmapset"
     case launchImage = "launchimage"
     case brandAssets = "brandassets"
     case appIconSet = "appiconset"
@@ -44,10 +44,10 @@ public enum XCAssetType: String {
         case .dataSet:
             return []
         case .textureSet:
-            return [.mipMapSet]
+            return [.mipmapSet]
         case .cubeTextureSet:
-            return [.mipMapSet]
-        case .mipMapSet:
+            return [.mipmapSet]
+        case .mipmapSet:
             return []
         case .launchImage:
             return []

@@ -5,8 +5,6 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-import Foundation
-
 public struct ColorSet {
     public var contents: ColorSetContents
 }

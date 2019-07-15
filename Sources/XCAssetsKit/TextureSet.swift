@@ -5,8 +5,6 @@
 //  Created by Atsuya Sato on 2019/07/15.
 //
 
-import Foundation
-
 public struct TextureSet {
     public var contents: TextureSetContents
 }
@@ -23,6 +21,8 @@ public struct TextureSetContents {
         public var memory: String?
         public var displayGamut: String?
         public var scale: String?
+        public var pixelFormat: String?
+        public var unassigned: Bool?
 
         private enum CodingKeys: String, CodingKey {
             case idiom
@@ -31,6 +31,8 @@ public struct TextureSetContents {
             case memory
             case displayGamut = "display-gamut"
             case scale
+            case pixelFormat = "pixel-format"
+            case unassigned = "unassigned"
         }
     }
     
