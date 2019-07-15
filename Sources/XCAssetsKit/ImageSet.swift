@@ -88,6 +88,12 @@ public struct ImageSetContents {
                 public var right: Int?
                 public var left: Int?
             }
+            
+            private enum CodingKeys: String, CodingKey {
+                case mode
+                case center
+                case capInsets = "cap-insets"
+            }
         }
     }
 }
