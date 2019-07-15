@@ -1,2 +1,2 @@
 # XCAssetsKit
-.xcassets parser for written in Swift
+.xcassets parser written in Swift
