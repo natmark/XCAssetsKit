@@ -6,5 +6,7 @@ Pod::Spec.new do |s|
   s.license        = { :type => 'MIT', :file => 'LICENSE' }
   s.author         = { 'Atsuya Sato' => 'natmark0918@gmail.com' }
   s.source         = { :git => "https://github.com/natmark/XCAssetsKit.git", :tag => s.version }
+  s.osx.deployment_target = "10.11"
+  s.ios.deployment_target = "10.0"
   s.source_files   = 'Sources/**/*.swift'
 end
