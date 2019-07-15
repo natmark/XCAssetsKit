@@ -19,15 +19,11 @@ public struct XCAssets {
 }
 
 public struct XCAssetsContents: Decodable {
-    var info: Info
-    var properties: Properties?
+    public var info: Info
+    public var properties: Properties?
 
-    struct Info: Decodable {
-        var version: Int
-        var author: String
-    }
-    struct Properties: Decodable {
-        var compressionType: String
+    public struct Properties: Decodable {
+        public var compressionType: String
         private enum CodingKeys: String, CodingKey {
             case compressionType = "compression-type"
         }
