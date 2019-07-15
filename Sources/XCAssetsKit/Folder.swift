@@ -20,7 +20,7 @@ public struct FolderContents: Decodable {
     public var properties: Properties?
 
     public struct Properties: Decodable {
-        public var compressionType: String
+        public var compressionType: String?
         public var onDemandResourceTags: [String]?
         public var providesNamespace: Bool?
         private enum CodingKeys: String, CodingKey {
