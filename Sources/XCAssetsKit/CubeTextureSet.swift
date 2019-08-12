@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CubeTextureSet: AssetProtocl {
+public struct CubeTextureSet: AssetProtocol {
     public typealias Contents = CubeTextureSetContents
     public var contents: Contents
     public var assets: [Asset] = []

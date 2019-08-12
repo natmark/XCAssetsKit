@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MipmapSet: AssetProtocl {
+public struct MipmapSet: AssetProtocol {
     public typealias Contents = MipmapSetContents
     public var contents: Contents
     public var assets: [Asset] = []

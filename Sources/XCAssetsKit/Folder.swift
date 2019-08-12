@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Folder: AssetProtocl {
+public struct Folder: AssetProtocol {
     public typealias Contents = FolderContents
     public var contents: Contents
     public var assets: [Asset] = []

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ImageSet: AssetProtocl {
+public struct ImageSet: AssetProtocol {
     public typealias Contents = ImageSetContents
     public var contents: Contents
     public var assets: [Asset] = []
