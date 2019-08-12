@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XCAssetsKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = ".xcassets parser written in Swift"
   s.homepage     = "https://github.com/natmark/XCAssetsKit"
   s.license        = { :type => 'MIT', :file => 'LICENSE' }
