@@ -16,23 +16,23 @@ public struct XCAssets {
         }
         let contents = try JSONDecoder().decode(XCAssetsContents.self, from: fileURL.contentsJSON())
         self.contents = contents
-        self.assets = try loadAssets(fileURL: fileURL, acceptedChildAssetTypes: PathExtensionType.folder.acceptedChildAssetTypes)
+        self.assets = try loadAssets(fileURL: fileURL, acceptedChildAssetTypes: AssetType.folder.acceptedChildAssetTypes)
     }
     
-    private func loadAssets(fileURL: URL, acceptedChildAssetTypes: [PathExtensionType]) throws -> [Asset] {
+    private func loadAssets(fileURL: URL, acceptedChildAssetTypes: [AssetType]) throws -> [Asset] {
         var contents: [Asset] = []
 
         for content in try fileURL.contents() {
             if !content.isDirectory {
                 continue
             }
-            guard let pathExtension = PathExtensionType(rawValue: content.pathExtension) else {
+            guard let assetType = AssetType(rawValue: content.pathExtension) else {
                 continue
             }
-            if !acceptedChildAssetTypes.contains(pathExtension) {
+            if !acceptedChildAssetTypes.contains(assetType) {
                 continue
             }
-            let asset = try Asset(pathExtensionType: pathExtension, jsonData: content.contentsJSON(), assets: loadAssets(fileURL: content, acceptedChildAssetTypes: pathExtension.acceptedChildAssetTypes), fileURL: content)
+            let asset = try Asset(assetType: assetType, jsonData: content.contentsJSON(), assets: loadAssets(fileURL: content, acceptedChildAssetTypes: assetType.acceptedChildAssetTypes), fileURL: content)
 
             contents.append(asset)
         }

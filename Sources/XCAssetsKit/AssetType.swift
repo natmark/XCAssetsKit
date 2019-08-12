@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PathExtensionType: String {
+public enum AssetType: String {
     case folder = ""
     case imageSet = "imageset"
     case colorSet = "colorset"
@@ -34,7 +34,7 @@ enum PathExtensionType: String {
     case sticker = "sticker"
     case stickerSequence = "stickersequense"
     
-    public var acceptedChildAssetTypes: [PathExtensionType] {
+    public var acceptedChildAssetTypes: [AssetType] {
         switch self {
         case .folder:
             return [.folder, .imageSet, .colorSet, .dataSet, .textureSet, .cubeTextureSet, .launchImage, .brandAssets, .appIconSet, .iconSet, .stickerIconSet, .arResoruceGroup, .complicationSet, .imageStack, .spriteAtlas, .gameCenterDashboardImage, .gameCenterLeaderBoard, .gameCenterLeaderBoardSet, .stickerPack]

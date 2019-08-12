@@ -15,15 +15,15 @@ final class FolderTests: XCTestCase {
         }
 
         let xcassets = try! XCAssets(fileURL: url)
-        XCTAssertEqual(xcassets.assets[0].pathExtensionType, .folder)
-        XCTAssertEqual(xcassets.assets[0].assets[0].pathExtensionType, .imageSet)
-        XCTAssertEqual(xcassets.assets[0].assets[1].pathExtensionType, .folder)
-        XCTAssertEqual(xcassets.assets[0].assets[1].assets[0].pathExtensionType, .imageSet)
-        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].pathExtensionType, .folder)
-        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[0].pathExtensionType, .folder)
-        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[0].assets[0].pathExtensionType, .imageSet)
-        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[1].pathExtensionType, .folder)
-        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[1].assets[0].pathExtensionType, .imageSet)
+        XCTAssertEqual(xcassets.assets[0].assetType, .folder)
+        XCTAssertEqual(xcassets.assets[0].assets[0].assetType, .imageSet)
+        XCTAssertEqual(xcassets.assets[0].assets[1].assetType, .folder)
+        XCTAssertEqual(xcassets.assets[0].assets[1].assets[0].assetType, .imageSet)
+        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assetType, .folder)
+        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[0].assetType, .folder)
+        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[0].assets[0].assetType, .imageSet)
+        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[1].assetType, .folder)
+        XCTAssertEqual(xcassets.assets[0].assets[1].assets[1].assets[1].assets[0].assetType, .imageSet)
     }
 }
 
