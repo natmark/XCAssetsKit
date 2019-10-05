@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AssetProtocol {
+public protocol AssetProtocol {
     associatedtype Contents
     var contents: Contents { get }
     var assets: [Asset] { get }
